@@ -32,9 +32,9 @@ export default {
 	var ctx = c.getContext('2d')
 	var that = this
 	myVideo.addEventListener('play', function() {
-		var i = window.setInterval(function() {
-			ctx.drawImage(myVideo, 0, 0, that.width, that.height)
-		}, 20)
+	  var i = window.setInterval(function() {
+		ctx.drawImage(myVideo, 0, 0, that.width, that.height)
+	  }, 20)
 	}, false)
 		
   },
