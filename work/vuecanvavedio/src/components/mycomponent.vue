@@ -8,8 +8,6 @@
 </template>
 
 <script>
-
-
 export default {
   props: {
 	vediosrc: {
@@ -25,7 +23,6 @@ export default {
       default: 400
 	}
   },
-  
   mounted() {
 	var c = this.$refs.mycanvas
 	var myVideo = this.$refs.mvideo
@@ -35,12 +32,10 @@ export default {
 	  var i = window.setInterval(function() {
 		ctx.drawImage(myVideo, 0, 0, that.width, that.height)
 	  }, 20)
-	}, false)
-		
+	}, false)	
   },
-  
   methods: {
-	playPause: function () {
+	playPause: function() {
 	  if (this.$refs.mvideo.paused) 
 		this.$refs.mvideo.play() 
 	  else 
