@@ -58,9 +58,7 @@
         }
       ]
       var video = videoInterface || document.createElement('video')
-	  //console.info(video)
       var url = this.getItemProperty(obj, options.urlProperty)
-	  //console.info(url)
       var type = this.getItemProperty(obj, options.typeProperty)
       var title = this.getItemProperty(obj, options.titleProperty)
       var posterUrl = this.getItemProperty(obj, options.videoPosterProperty)
@@ -73,11 +71,8 @@
       videoContainer.addClass(options.videoContentClass)
 	  
 	  
-	  //canvas替换
 	  var x = document.createElement("CANVAS");
-	  //console.info(videoContainer.offsetWidth);
-	  //x.style.width = videoContainer.offsetWidth;
-	  //x.style.height = videoContainer.offsetHeight;
+	
 	  var ctx=x.getContext("2d");
 	
 	
@@ -153,22 +148,22 @@
             isLoading = true
             videoContainer.addClass(that.options.videoLoadingClass)
             that.playingVideo = video
-			video.style.visibility = "hidden";
+			video.style.visibility = "hidden"
 			console.info(isLoading)
-			x.setAttribute("width",videoContainerNode.offsetWidth);
-			x.setAttribute("height",videoContainerNode.offsetHeight);
+			x.setAttribute("width",videoContainerNode.offsetWidth)
+			x.setAttribute("height",videoContainerNode.offsetHeight)
 			var i = window.setInterval(function() {
                 ctx.drawImage(video, 0, 0, videoContainerNode.offsetWidth, videoContainerNode.offsetHeight)
-            }, 20);
+            }, 20)
 			
 			
           })
 		  
 		$(x).on('click', function (event) {
 			if (video.paused) 
-			  video.play(); 
+			  video.play() 
 			else 
-			  video.pause(); 
+			  video.pause()
         }) 
 		
 		
