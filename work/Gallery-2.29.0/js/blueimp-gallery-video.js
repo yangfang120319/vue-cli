@@ -69,16 +69,8 @@
       var isLoading
       var hasControls
       videoContainer.addClass(options.videoContentClass)
-	  
-	  
 	  var x = document.createElement("CANVAS");
-	
 	  var ctx=x.getContext("2d");
-	
-	
-	
-	
-	  
       if (title) {
         videoContainerNode.title = title
       }
@@ -183,9 +175,6 @@
 	  
       videoContainerNode.appendChild(playMediaControl)
 	  videoContainerNode.appendChild(x)
-	  
-	  
-	  
 	  
       this.setTimeout(callback, [
         {
